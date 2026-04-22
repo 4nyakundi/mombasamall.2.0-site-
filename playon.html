@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mombasa Mall | Play On</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/split-type"></script>
+    <style>
+        /* Dark Mode Override for Play On */
+        body { background-color: #050505; color: #fff; background-image: none; }
+        nav { background: rgba(5, 5, 5, 0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-links a { color: #fff; }
+        .nav-links a:hover { color: #f0f; text-shadow: 0 0 10px #f0f; }
+        
+        .playon-hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .playon-video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .playon-video-bg video { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; filter: contrast(1.2) saturate(1.5); }
+        .playon-hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, #050505); }
+        
+        .neon-text { font-size: 10vw; font-weight: 800; color: transparent; -webkit-text-stroke: 2px #f0f; text-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.2); margin-bottom: 1rem; }
+        .neon-sub { font-size: 1.5rem; color: #0ff; letter-spacing: 5px; text-transform: uppercase; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+        
+        .features { padding: 15vh 5vw; display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; }
+        .feature-card { background: #111; padding: 4rem; border-radius: 30px; border: 1px solid rgba(255,0,255,0.2); box-shadow: 0 0 30px rgba(255,0,255,0.05); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 0 50px rgba(0,255,255,0.2); border-color: rgba(0,255,255,0.5); }
+        .feature-card h3 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem; }
+        .feature-card p { color: #888; font-size: 1.2rem; }
+        
+        /* Cursor override */
+        .cursor { background-color: #f0f; }
+        .cursor-follower { border-color: #0ff; }
+        .cursor.active { mix-blend-mode: normal; background-color: #0ff; }
+    </style>
+</head>
+<body class="loading">
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="preloader">
+        <div class="preloader-counter" style="color: #f0f;">0%</div>
+        <div class="preloader-overlay" style="background: #0ff;"></div>
+    </div>
+
+    <!-- Ambient Orbs -->
+    <div class="ambient-orb orb-1" style="background: #f0f;"></div>
+    <div class="ambient-orb orb-2" style="background: #0ff;"></div>
+
+    <nav>
+        <a href="index.html" class="logo interactable">
+            <img src="images/MOMBASA MALL2.0 Logo Wide no bg.png" alt="Mombasa Mall" style="filter: brightness(0) invert(1);">
+        </a>
+        <ul class="nav-links">
+            <li><a href="shops.html" class="interactable">Shops</a></li>
+            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+            <li><a href="playon.html" class="interactable" style="color: #f0f; text-shadow: 0 0 10px #f0f;">Play On</a></li>
+            <li><a href="led-advert.html" class="interactable">LED Advert</a></li>
+        </ul>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <header class="playon-hero">
+                <div class="playon-video-bg">
+                    <video autoplay loop muted playsinline>
+                        <source src="images/Mall Videos/play on media.mp4" type="video/mp4">
+                    </video>
+                    <div class="playon-hero-overlay"></div>
+                </div>
+                <div style="text-align: center; position: relative; z-index: 2;">
+                    <h1 class="neon-text split-text">PLAY ON</h1>
+                    <p class="neon-sub split-text">The Ultimate Digital Frontier</p>
+                </div>
+            </header>
+
+            <section class="features">
+                <div class="feature-card interactable">
+                    <h3 style="color: #f0f;">VR Immersion</h3>
+                    <p>Step into entirely new worlds with our state-of-the-art virtual reality rigs. Haptic feedback and fully omnidirectional treadmills available.</p>
+                </div>
+                <div class="feature-card interactable">
+                    <h3 style="color: #0ff;">Arcade Legends</h3>
+                    <p>Compete in the largest arcade floor in the region. From retro classics to the newest fighting game cabinets.</p>
+                </div>
+                <div class="feature-card interactable">
+                    <h3 style="color: #ff0;">Laser Tag Arena</h3>
+                    <p>A multi-level, neon-lit tactical arena. Perfect for parties, corporate team-building, or settling scores.</p>
+                </div>
+                <div class="feature-card interactable">
+                    <h3 style="color: #0f0;">Kids Imagination Zone</h3>
+                    <p>Safe, physical play structures and interactive educational digital screens for the youngest members of the family.</p>
+                </div>
+            </section>
+
+            <footer class="mega-footer" style="border-top: 1px solid #333;">
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <h2>Join the Inner Circle</h2>
+                        <p style="color: #94A3B8; margin-bottom: 2rem; max-width: 400px; font-size: 1.1rem; line-height: 1.6;">Subscribe to our newsletter for exclusive access to sales, events, and new store openings.</p>
+                        <div class="newsletter-form" style="display: flex; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; max-width: 400px; margin-bottom: 2rem;">
+                            <input type="email" placeholder="YOUR EMAIL ADDRESS" style="background: transparent; border: none; color: #fff; width: 100%; font-size: 1rem; outline: none; font-family: var(--font-body);">
+                            <button class="interactable" style="background: transparent; border: none; color: #f0f; cursor: none; font-size: 1.5rem;">&rarr;</button>
+                        </div>
+                    </div>
+                    <div class="footer-right" style="display: flex; gap: 4rem;">
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">EXPLORE</li>
+                            <li><a href="shops.html" class="interactable">Shops</a></li>
+                            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+                            <li><a href="playon.html" class="interactable">Play On</a></li>
+                            <li><a href="led-advert.html" class="interactable">LED Advert</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">SOCIAL</li>
+                            <li><a href="#" class="interactable">Instagram</a></li>
+                            <li><a href="#" class="interactable">Facebook</a></li>
+                            <li><a href="#" class="interactable">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-marquee-wrapper" style="overflow: hidden; white-space: nowrap; width: 100vw; margin-left: -5vw; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem;">
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                    </div>
+                    <div class="footer-info" style="margin-top: 2rem;">
+                        <p>Jomo Kenyatta Ave, Mombasa</p>
+                        <p>© 2026 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

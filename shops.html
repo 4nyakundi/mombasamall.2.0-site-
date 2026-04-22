@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mombasa Mall | Shops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/split-type"></script>
+    <style>
+        .editorial-header { padding: 20vh 5vw 10vh; text-align: center; }
+        .editorial-header h1 { font-size: 8vw; color: var(--accent-indigo); line-height: 0.9; letter-spacing: -2px; font-weight: 800; margin-bottom: 2rem; }
+        .masonry-grid { column-count: 3; column-gap: 2rem; padding: 0 5vw 15vh; }
+        .masonry-item { break-inside: avoid; margin-bottom: 2rem; border-radius: 20px; overflow: hidden; background: #fff; padding: 3rem; display: flex; justify-content: center; align-items: center; box-shadow: 10px 10px 30px rgba(0,0,0,0.03); transition: transform 0.4s ease, filter 0.4s ease; border: 1px solid rgba(0,0,0,0.05); }
+        .masonry-item img { max-width: 100%; max-height: 200px; mix-blend-mode: multiply; filter: grayscale(100%); transition: filter 0.4s ease, transform 0.4s ease; }
+        
+        .masonry-grid:hover .masonry-item { opacity: 0.4; filter: blur(2px); }
+        .masonry-grid .masonry-item:hover { opacity: 1; filter: blur(0px); transform: scale(1.05); z-index: 10; position: relative; box-shadow: 20px 20px 60px rgba(0,0,0,0.1); }
+        .masonry-grid .masonry-item:hover img { filter: grayscale(0%); transform: scale(1.1); }
+        
+        @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+        @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+    </style>
+</head>
+<body class="loading">
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="preloader">
+        <div class="preloader-counter">0%</div>
+        <div class="preloader-overlay"></div>
+    </div>
+
+    <!-- Ambient Orbs -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+
+    <nav>
+        <a href="index.html" class="logo interactable">
+            <img src="images/MOMBASA MALL2.0 Logo Wide no bg.png" alt="Mombasa Mall">
+        </a>
+        <ul class="nav-links">
+            <li><a href="shops.html" class="interactable" style="color: var(--accent-blue)">Shops</a></li>
+            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+            <li><a href="playon.html" class="interactable">Play On</a></li>
+            <li><a href="led-advert.html" class="interactable">LED Advert</a></li>
+        </ul>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <header class="editorial-header">
+                <h1 class="split-text">Curated<br>Experiences</h1>
+                <p class="split-text" style="font-size: 1.4rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Discover the zenith of retail. Hover to explore our diverse range of premium local and international brands.</p>
+            </header>
+
+            <section class="masonry-grid">
+                <div class="masonry-item interactable"><img src="images/Shop Logos/Gamers-Vault-Tag-2 - Copy.PNG" alt="Gamers Vault"></div>
+                <div class="masonry-item interactable" style="padding: 5rem 3rem;"><img src="images/Shop Logos/Ident Smile.jpg" alt="Ident Smile"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/MALKIA.jpg" alt="Malkia"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/Michaels.jpg" alt="Michaels"></div>
+                <div class="masonry-item interactable" style="padding: 2rem 3rem;"><img src="images/Shop Logos/NOVUM.jpg" alt="Novum"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/Naivasmain.jpeg" alt="Naivas"></div>
+                <div class="masonry-item interactable" style="padding: 6rem 3rem;"><img src="images/Shop Logos/OSONA YARNS .png" alt="Osona Yarns"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/SKYVE STUDIO.jpg" alt="Skyve Studio"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/Tawala ICT.jpg" alt="Tawala ICT"></div>
+                <div class="masonry-item interactable" style="padding: 4rem 3rem;"><img src="images/Shop Logos/Tickles and Giggles .jpg" alt="Tickles and Giggles"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/Westerwellemsa.png" alt="Westerwelle"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/World designers.jpg" alt="World Designers"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/chick.jpeg" alt="Chick"></div>
+                <div class="masonry-item interactable" style="padding: 3rem;"><img src="images/Shop Logos/creamery.jpeg" alt="Creamery"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/daliah .jpg" alt="Daliah"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/denri _400x400.jpg" alt="Denri"></div>
+                <div class="masonry-item interactable" style="padding: 6rem 3rem;"><img src="images/Shop Logos/equity afria.png" alt="Equity Afria"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/equityafia.jpeg" alt="Equity Afia"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/mintos.jpg" alt="Mintos"></div>
+                <div class="masonry-item interactable" style="padding: 2rem 3rem;"><img src="images/Shop Logos/ncba.jpg" alt="NCBA"></div>
+                <div class="masonry-item interactable"><img src="images/Shop Logos/pizzalogo.jpeg" alt="Pizza"></div>
+            </section>
+
+            <footer class="mega-footer">
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <h2>Join the Inner Circle</h2>
+                        <p style="color: #94A3B8; margin-bottom: 2rem; max-width: 400px; font-size: 1.1rem; line-height: 1.6;">Subscribe to our newsletter for exclusive access to sales, events, and new store openings.</p>
+                        <div class="newsletter-form" style="display: flex; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; max-width: 400px; margin-bottom: 2rem;">
+                            <input type="email" placeholder="YOUR EMAIL ADDRESS" style="background: transparent; border: none; color: #fff; width: 100%; font-size: 1rem; outline: none; font-family: var(--font-body);">
+                            <button class="interactable" style="background: transparent; border: none; color: var(--accent-blue); cursor: none; font-size: 1.5rem;">&rarr;</button>
+                        </div>
+                    </div>
+                    <div class="footer-right" style="display: flex; gap: 4rem;">
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">EXPLORE</li>
+                            <li><a href="shops.html" class="interactable">Shops</a></li>
+                            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+                            <li><a href="playon.html" class="interactable">Play On</a></li>
+                            <li><a href="led-advert.html" class="interactable">LED Advert</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">SOCIAL</li>
+                            <li><a href="#" class="interactable">Instagram</a></li>
+                            <li><a href="#" class="interactable">Facebook</a></li>
+                            <li><a href="#" class="interactable">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-marquee-wrapper" style="overflow: hidden; white-space: nowrap; width: 100vw; margin-left: -5vw; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem;">
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                    </div>
+                    <div class="footer-info" style="margin-top: 2rem;">
+                        <p>Jomo Kenyatta Ave, Mombasa</p>
+                        <p>© 2026 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

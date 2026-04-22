@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mombasa Mall | LED Advert Leasing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/split-type"></script>
+    <style>
+        .led-hero { height: 60vh; background: #0B0F19; display: flex; align-items: center; padding: 0 5vw; position: relative; overflow: hidden; }
+        .led-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.2; background-image: radial-gradient(var(--accent-blue) 1px, transparent 1px); background-size: 20px 20px; }
+        .led-title { font-size: 5rem; color: #fff; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; z-index: 2; position: relative; }
+        .led-subtitle { color: var(--accent-blue); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; z-index: 2; position: relative; }
+        
+        .led-content { display: flex; gap: 4rem; padding: 10vh 5vw; align-items: flex-start; }
+        .led-info { flex: 1; }
+        .stat-block { display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .stat-num { font-size: 4rem; font-family: var(--font-heading); color: var(--accent-indigo); font-weight: 800; line-height: 1; }
+        .stat-text { font-size: 1.1rem; color: var(--text-muted); }
+        
+        .led-form-container { flex: 1; }
+        .glass-form-led { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 20px 20px 60px rgba(0,0,0,0.05); border-radius: 30px; padding: 4rem; display: flex; flex-direction: column; gap: 2rem; }
+        .glass-form-led h2 { font-size: 2.2rem; color: var(--accent-indigo); font-weight: 700; margin-bottom: 1rem; }
+        .glass-form-led input, .glass-form-led select { border: none; border-bottom: 2px solid #e2e8f0; padding: 1rem 0; font-size: 1.1rem; font-family: var(--font-body); font-weight: 500; background: transparent; color: var(--text-dark); transition: border-color 0.3s; width: 100%; appearance: none; }
+        .glass-form-led input:focus, .glass-form-led select:focus { outline: none; border-bottom-color: var(--accent-blue); }
+        
+        @media (max-width: 900px) { .led-content { flex-direction: column; } .glass-form-led { padding: 2rem; } }
+    </style>
+</head>
+<body class="loading">
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="preloader">
+        <div class="preloader-counter">0%</div>
+        <div class="preloader-overlay"></div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo interactable">
+            <img src="images/MOMBASA MALL2.0 Logo Wide no bg.png" alt="Mombasa Mall">
+        </a>
+        <ul class="nav-links">
+            <li><a href="shops.html" class="interactable">Shops</a></li>
+            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+            <li><a href="playon.html" class="interactable">Play On</a></li>
+            <li><a href="led-advert.html" class="interactable" style="color: var(--accent-blue)">LED Advert</a></li>
+        </ul>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <header class="led-hero">
+                <div class="led-hero-bg"></div>
+                <div>
+                    <p class="led-subtitle split-text">Premium Advertising</p>
+                    <h1 class="led-title split-text">Command<br>Attention.</h1>
+                </div>
+            </header>
+
+            <section class="led-content">
+                <div class="led-info">
+                    <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">Why Advertise With Us?</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 4rem;">Place your brand squarely in front of the largest consumer base in Mwembe Tayari. Our high-definition indoor and outdoor LED screens offer unparalleled visibility and engagement.</p>
+                    
+                    <div class="stat-block">
+                        <div class="stat-num">5M+</div>
+                        <div class="stat-text"><strong>Annual Foot Traffic.</strong><br>A massive captive audience for your brand messaging.</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-num">4K</div>
+                        <div class="stat-text"><strong>Ultra HD Resolution.</strong><br>Crystal clear displays ensuring your creatives look stunning.</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-num">24/7</div>
+                        <div class="stat-text"><strong>Continuous Loop.</strong><br>Round-the-clock exposure on the outdoor digital billboards.</div>
+                    </div>
+                </div>
+
+                <div class="led-form-container">
+                    <div class="glass-form-led interactable">
+                        <h2>Inquire About Screen Time</h2>
+                        <input type="text" placeholder="Company Name">
+                        <input type="email" placeholder="Contact Email">
+                        <select>
+                            <option value="" disabled selected>Select Screen Location</option>
+                            <option value="outdoor">Outdoor Main Facade LED</option>
+                            <option value="indoor">Indoor Atrium Displays</option>
+                            <option value="both">Full Mall Takeover (Both)</option>
+                        </select>
+                        <select>
+                            <option value="" disabled selected>Campaign Duration</option>
+                            <option value="1week">1 Week</option>
+                            <option value="1month">1 Month</option>
+                            <option value="3months">3 Months+</option>
+                        </select>
+                        <button class="magnetic-btn interactable" style="margin-top: 1rem;"><span>Request Quote</span></button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="mega-footer">
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <h2>Join the Inner Circle</h2>
+                        <p style="color: #94A3B8; margin-bottom: 2rem; max-width: 400px; font-size: 1.1rem; line-height: 1.6;">Subscribe to our newsletter for exclusive access to sales, events, and new store openings.</p>
+                        <div class="newsletter-form" style="display: flex; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; max-width: 400px; margin-bottom: 2rem;">
+                            <input type="email" placeholder="YOUR EMAIL ADDRESS" style="background: transparent; border: none; color: #fff; width: 100%; font-size: 1rem; outline: none; font-family: var(--font-body);">
+                            <button class="interactable" style="background: transparent; border: none; color: var(--accent-blue); cursor: none; font-size: 1.5rem;">&rarr;</button>
+                        </div>
+                    </div>
+                    <div class="footer-right" style="display: flex; gap: 4rem;">
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">EXPLORE</li>
+                            <li><a href="shops.html" class="interactable">Shops</a></li>
+                            <li><a href="gallery.html" class="interactable">Gallery</a></li>
+                            <li><a href="playon.html" class="interactable">Play On</a></li>
+                            <li><a href="led-advert.html" class="interactable">LED Advert</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li style="color: #fff; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem;">SOCIAL</li>
+                            <li><a href="#" class="interactable">Instagram</a></li>
+                            <li><a href="#" class="interactable">Facebook</a></li>
+                            <li><a href="#" class="interactable">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-marquee-wrapper" style="overflow: hidden; white-space: nowrap; width: 100vw; margin-left: -5vw; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem;">
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                        <h1 class="footer-mega-text marquee-text" style="display: inline-block; padding-right: 2rem;">MOMBASA MALL • MOMBASA MALL • MOMBASA MALL • </h1>
+                    </div>
+                    <div class="footer-info" style="margin-top: 2rem;">
+                        <p>Jomo Kenyatta Ave, Mombasa</p>
+                        <p>© 2026 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
